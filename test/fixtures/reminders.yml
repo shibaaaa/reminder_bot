@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  remind_at: 2022-02-21 20:20:04
+  message: MyString
+  interval_seconds: 1
+  type: 
+
+two:
+  remind_at: 2022-02-21 20:20:04
+  message: MyString
+  interval_seconds: 1
+  type: 
