@@ -1,0 +1,2 @@
+class IntervalReminder < Reminder
+end
