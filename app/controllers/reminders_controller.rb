@@ -24,6 +24,7 @@ class RemindersController < ApplicationController
     @reminder = Reminder.new(reminder_params)
 
     if @reminder.save
+      @reminder = @reminder.becomes(Reminder)
       redirect_to @reminder, notice: "Reminder was successfully created."
     else
       render :new, status: :unprocessable_entity
