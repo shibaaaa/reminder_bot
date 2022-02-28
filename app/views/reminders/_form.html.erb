@@ -1,4 +1,4 @@
-<%= form_with(model: reminder) do |form| %>
+<%= form_with(model: @reminder.becomes(Reminder)) do |form| %>
   <% if reminder.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(reminder.errors.count, "error") %> prohibited this reminder from being saved:</h2>
@@ -13,7 +13,7 @@
 
   <div>
     <%= form.label :remind_at, style: "display: block" %>
-    <%= form.datetime_field :remind_at %>
+    <%= form.datetime_field :remind_at, step: 600 %>
   </div>
 
   <div>

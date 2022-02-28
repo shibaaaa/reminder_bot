@@ -4,9 +4,9 @@
 
 <div id="reminders">
   <% @reminders.each do |reminder| %>
-    <%= render reminder %>
+    <%= render reminder.becomes(Reminder) %>
     <p>
-      <%= link_to "Show this reminder", reminder %>
+      <%= link_to "Show this reminder", reminder.becomes(Reminder) %>
     </p>
   <% end %>
 </div>

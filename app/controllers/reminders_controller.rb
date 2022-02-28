@@ -24,7 +24,7 @@ class RemindersController < ApplicationController
     @reminder = Reminder.new(reminder_params)
 
     if @reminder.save
-      redirect_to @reminder, notice: "Reminder was successfully created."
+      redirect_to @reminder.becomes(Reminder), notice: "Reminder was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
@@ -33,7 +33,7 @@ class RemindersController < ApplicationController
   # PATCH/PUT /reminders/1
   def update
     if @reminder.update(reminder_params)
-      redirect_to @reminder, notice: "Reminder was successfully updated."
+      redirect_to @reminder.becomes(Reminder), notice: "Reminder was successfully updated."
     else
       render :edit, status: :unprocessable_entity
     end

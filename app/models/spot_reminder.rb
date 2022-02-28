@@ -1,0 +1,2 @@
+class SpotReminder < Reminder
+end
