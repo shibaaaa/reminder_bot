@@ -5,6 +5,6 @@
 <br>
 
 <div>
-  <%= link_to "Show this reminder", @reminder %> |
+  <%= link_to "Show this reminder", @reminder.becomes(Reminder) %> |
   <%= link_to "Back to reminders", reminders_path %>
 </div>
