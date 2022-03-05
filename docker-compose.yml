@@ -15,7 +15,7 @@ services:
     environment:
       POSTGRES_HOST: db
     ports:
-      - "3003:3000"
+      - "3000:3000"
     depends_on:
       - db
 
