@@ -53,6 +53,6 @@ class RemindersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def reminder_params
-      params.require(:reminder).permit(:remind_at, :message, :interval_seconds, :type)
+      params.require(:reminder).permit(:remind_at, :message, :interval_days, :type)
     end
 end
