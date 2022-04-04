@@ -13,6 +13,6 @@ class Reminder < ApplicationRecord
   def interval_days
     return if interval_seconds.nil?
 
-    self.interval_seconds / (60 * 60 * 24)
+    self.interval_seconds / 1.day
   end
 end
