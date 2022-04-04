@@ -22,7 +22,6 @@ class RemindersController < ApplicationController
   # POST /reminders
   def create
     @reminder = Reminder.new(reminder_params)
-
     if @reminder.save
       redirect_to @reminder.becomes(Reminder), notice: "Reminder was successfully created."
     else
@@ -32,6 +31,8 @@ class RemindersController < ApplicationController
 
   # PATCH/PUT /reminders/1
   def update
+    @reminder = @reminder.becomes(reminder_params[:type].constantize)
+
     if @reminder.update(reminder_params)
       redirect_to @reminder.becomes(Reminder), notice: "Reminder was successfully updated."
     else
