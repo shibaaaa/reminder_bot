@@ -5,9 +5,7 @@ class Reminder < ApplicationRecord
   end
 
   def interval_days=(days)
-    return if days.blank?
-
-    self.interval_seconds = days.to_i.days
+    self.interval_seconds = days.blank? ? nil : days.to_i.days
   end
 
   def interval_days
