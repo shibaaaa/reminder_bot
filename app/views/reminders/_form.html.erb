@@ -21,6 +21,18 @@
     <%= form.text_area :message %>
   </div>
 
+  <% if @reminder.new_record? %>
+    <div>
+      <%= form.label :webhook_url, style: "display: block" %>
+      <%= form.text_field :webhook_url %>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :channel_name, style: "display: block" %>
+    <%= form.text_field :channel_name %>
+  </div>
+
   <div>
     <%= form.label :interval_days, style: "display: block" %>
     <%= form.number_field :interval_days %>
