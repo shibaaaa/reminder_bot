@@ -13,24 +13,24 @@
 
   <div>
     <%= form.label :remind_at, style: "display: block" %>
-    <%= form.datetime_field :remind_at, step: 600 %>
+    <%= form.datetime_field :remind_at, step: 600, required: true %>
   </div>
 
   <div>
     <%= form.label :message, style: "display: block" %>
-    <%= form.text_area :message %>
+    <%= form.text_area :message, required: true %>
   </div>
 
   <% if @reminder.new_record? %>
     <div>
       <%= form.label :webhook_url, style: "display: block" %>
-      <%= form.text_field :webhook_url %>
+      <%= form.text_field :webhook_url, required: true %>
     </div>
   <% end %>
 
   <div>
     <%= form.label :channel_name, style: "display: block" %>
-    <%= form.text_field :channel_name %>
+    <%= form.text_field :channel_name, required: true %>
   </div>
 
   <div>
@@ -41,7 +41,7 @@
   <div>
     <%= form.label :type, style: "display: block" %>
 
-    <%= form.collection_radio_buttons :type, %w[SpotReminder IntervalReminder], :to_s, :to_s %>
+    <%= form.collection_radio_buttons :type, %w[SpotReminder IntervalReminder], :to_s, :to_s, {}, required: true %>
   </div>
 
   <div>
