@@ -54,6 +54,6 @@ class RemindersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def reminder_params
-      params.require(:reminder).permit(:remind_at, :message, :interval_days, :type)
+      params.require(:reminder).permit(:remind_at, :message, :interval_days, :type, :webhook_url, :channel_name)
     end
 end
