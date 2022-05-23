@@ -1,10 +1,8 @@
 class DiscordMessenger
-  WEBHOOK_URL = ENV['WEBHOOK_URL']
-
-  def self.send(message)
-    client = Discordrb::Webhooks::Client.new(url: WEBHOOK_URL)
+  def self.send(message, url)
+    client = Discordrb::Webhooks::Client.new(url: url)
     client.execute do |builder|
-      builder.content = "#{message}"
+      builder.content = message
     end
   end
 end
