@@ -9,10 +9,12 @@
     <%= reminder.message %>
   </p>
 
-  <p>
-    <strong>Interval seconds:</strong>
-    <%= reminder.interval_seconds %>
-  </p>
+  <% if reminder.type == 'IntervalReminder' %>
+    <p>
+      <strong>Interval seconds:</strong>
+      <%= reminder.interval_seconds %>
+    </p>
+  <% end %>
 
   <p>
     <strong>Type:</strong>
