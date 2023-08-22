@@ -135,7 +135,7 @@ GEM
     opus-ruby (1.0.1)
       ffi
     pg (1.5.3)
-    puma (5.6.6)
+    puma (5.6.7)
       nio4r (~> 2.0)
     racc (1.6.2)
     rack (2.2.6.4)
